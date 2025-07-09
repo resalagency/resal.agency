@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>وكالة رِسال للتسويق بالمحتوى</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+      overflow-x: hidden;
+    }
+    .top-section {
+      background: linear-gradient(135deg, #0f172a, #334155);
+      padding: 30px 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .top-section img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .top-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+    .headline-container {
+      background: #f9fafb;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    .typing {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1e3a8a;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #1e3a8a;
+      animation: typing 2s steps(30, end) forwards, blink 0.75s step-end infinite;
+      display: inline-block;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #1e3a8a; }
+    }
+    .description {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.7;
+    }
+    h2 {
+      color: #1e3a8a;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .services {
+      background: #f9fafb;
+      padding: 10px 20px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .service {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      font-size: 17px;
+    }
+    .service:hover {
+      background: #1e3a8a;
+      color: white;
+      transform: scale(1.02);
+    }
+    .contact-section {
+      background: linear-gradient(135deg, #0f172a, #334155);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: -10px;
+    }
+    .contact-section h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .contact-section p {
+      margin-top: 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .socials {
+      margin-top: 15px;
+    }
+    .socials a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .email {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    .email img {
+      width: 20px;
+      height: 20px;
+    }
+    .footer {
+      font-size: 14px;
+      margin-top: 20px;
+      color: #ccc;
+    }
+    @media (max-width: 768px) {
+      .top-section {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .top-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .headline-container .typing {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-section">
+    <div class="top-title">وكالة رِسال للتسويق بالمحتوى</div>
+    <img src="logo.png" alt="شعار رسال">
+  </div>
+
+  <div class="headline-container">
+    <div class="typing">مرحبًا بك في وكالة رِسال</div>
+    <p class="description">
+      نحن وكالة "رِسال" المتخصصة في صناعة المحتوى، نروي قصص العلامات التجارية بإسلوب مبتكر، عبر استراتيجيات تسويقية حديثة وبالتحليل العميق المدعوم بالذكاء الاصطناعي نصنع المحتوى الإبداعي المؤثر.
+    </p>
+  </div>
+
+  <h2>خدماتنا:</h2>
+  <div class="services">
+    <div class="service">دراسة المحتوى القديم والمنافسين والجمهور</div>
+    <div class="service">إعداد استراتيجيات تسويقية مخصصة لكل مشروع</div>
+    <div class="service">كتابة المحتوى القصصي والتجاري الجذاب</div>
+    <div class="service">إدارة حسابات التواصل الاجتماعي بالكامل</div>
+    <div class="service">تجميل واجهة الحسابات بشكل أنيق</div>
+    <div class="service">تصوير بمعدات احترافية ومونتاج حسب كل منصة</div>
+    <div class="service">جدولة المحتوى والتفاعل مع الجمهور بعفوية</div>
+    <div class="service">ردود ذكية باستخدام الذكاء الاصطناعي</div>
+    <div class="service">تقارير مفصلة للحسابات والمقاطع مع رسوم بيانية</div>
+    <div class="service">لوحة تحكم (Dashboard) لايف للعميل مع رسوم بيانية</div>
+  </div>
+
+  <div class="contact-section">
+    <h3>جاهز نبدأ مشروعك؟</h3>
+    <p>تواصل معانا بالطريقة الي تريحك</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/resal.agency" target="_blank">إنستقرام</a>
+      <a href="https://www.tiktok.com/@resal.agency" target="_blank">تيك توك</a>
+    </div>
+    <div class="email">
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="email">
+      <span>info@resal.agency</span>
+    </div>
+    <div class="footer">
+      © 2025 جميع الحقوق محفوظة - وكالة رِسال للتسويق بالمحتوى
+    </div>
+  </div>
+</body>
+</html>
