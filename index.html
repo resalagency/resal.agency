@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>وكالة رِسال للتسويق بالمحتوى</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+      overflow-x: hidden;
+    }
+    .top-section {
+      background: linear-gradient(135deg, #0f172a, #334155);
+      padding: 30px 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .top-section img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .top-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+    .headline-container {
+      background: white;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    .typing {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1e3a8a;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #1e3a8a;
+      display: inline-block;
+      max-width: 100%;
+    }
+    .description {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 20px auto 0;
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease 1s;
+    }
+    .description.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .services-section {
+      background: #f9fafb;
+      padding: 0 20px 0;
+      text-align: center;
+    }
+    .services-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1e3a8a;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #1e3a8a;
+      display: inline-block;
+      max-width: 100%;
+      margin: 20px auto;
+    }
+    .services {
+      background: #f3f4f6;
+      padding: 10px 20px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .service {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      font-size: 17px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .service.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .contact-section {
+      background: linear-gradient(135deg, #0f172a, #334155);
+      color: white;
+      text-align: center;
+      padding: 20px 20px 40px;
+    }
+    .contact-section h3 {
+      font-size: 32px;
+      font-weight: 800;
+      margin: 16px 0 4px;
+    }
+    .contact-section p {
+      margin: 0 0 30px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .socials {
+      margin: 0 0 6px;
+    }
+    .socials a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .email {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .footer {
+      font-size: 14px;
+      margin: 0;
+      color: #ccc;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+    .whatsapp-button:hover {
+      background-color: #1da851;
+    }
+    @media (max-width: 768px) {
+      .top-section {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .top-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .headline-container .typing {
+        font-size: 24px;
+      }
+      .contact-section h3 {
+        font-size: 28px;
+      }
+      .contact-section p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-section">
+    <div class="top-title">وكالة رِسال للتسويق بالمحتوى</div>
+    <img src="logo.png" alt="شعار رسال">
+  </div>
+  <div class="headline-container">
+    <div class="typing" id="main-typing"></div>
+    <p class="description" id="main-description">
+      نحن وكالة "رِسال" المتخصصة في صناعة المحتوى، نروي قصص العلامات التجارية بإسلوب مبتكر، عبر استراتيجيات تسويقية حديثة وبالتحليل العميق المدعوم بالذكاء الاصطناعي نصنع المحتوى الإبداعي المؤثر.
+    </p>
+  </div>
+  <div class="services-section">
+    <div class="services-title typing" id="services-title"></div>
+    <div class="services">
+      <div class="service">دراسة المحتوى القديم والمنافسين والجمهور</div>
+      <div class="service">إعداد استراتيجيات تسويقية مخصصة لكل مشروع</div>
+      <div class="service">كتابة المحتوى القصصي والتجاري الجذاب</div>
+      <div class="service">إدارة حسابات التواصل الاجتماعي بالكامل</div>
+      <div class="service">تجميل واجهة الحسابات بشكل أنيق</div>
+      <div class="service">تصوير بمعدات احترافية ومونتاج حسب كل منصة</div>
+      <div class="service">جدولة المحتوى والتفاعل مع الجمهور بعفوية</div>
+      <div class="service">ردود ذكية باستخدام الذكاء الاصطناعي</div>
+      <div class="service">تقارير مفصلة للحسابات والمقاطع مع رسوم بيانية</div>
+      <div class="service">لوحة تحكم توضيحية لايف للعميل مع رسوم بيانية</div>
+    </div>
+  </div>
+  <div class="contact-section">
+    <h3>جاهز نبدأ مشروعك؟</h3>
+    <p>تواصل معانا بالطريقة الي تريحك</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/resal.agency" target="_blank">إنستقرام</a>
+      <a href="https://www.tiktok.com/@resal.agency" target="_blank">تيك توك</a>
+    </div>
+    <div class="email"><a href="mailto:info@resal.agency" style="color:white;text-decoration:underline;">info@resal.agency</a></div>
+    <div class="footer">© 2025 جميع الحقوق محفوظة - وكالة رِسال للتسويق بالمحتوى</div>
+  </div>
+  <a href="https://wa.me/966546020075" class="whatsapp-button" target="_blank">راسلنا واتساب</a>
+  <script>
+    function typeText(elementId, text, speed = 80) {
+      const el = document.getElementById(elementId);
+      if (el.dataset.typed) return;
+      el.dataset.typed = 'true';
+      el.innerHTML = '';
+      let i = 0;
+      const interval = setInterval(() => {
+        if (i < text.length) {
+          el.innerHTML += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(interval);
+        }
+      }, speed);
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('typed')) {
+          entry.target.classList.add('typed');
+          if (entry.target.id === 'main-typing') {
+            typeText('main-typing', 'مرحبًا بك في وكالة رِسال');
+          }
+          if (entry.target.id === 'services-title') {
+            typeText('services-title', 'خدماتنا:');
+          }
+          if (entry.target.classList.contains('description') || entry.target.classList.contains('service')) {
+            entry.target.classList.add('visible');
+          }
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.typing, .description, .service').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
